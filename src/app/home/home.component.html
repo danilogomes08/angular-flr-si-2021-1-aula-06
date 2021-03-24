@@ -1,0 +1,13 @@
+<div class="container-fluid">
+  <h1 class="h3 text-center mt-3 mb-5">Página Inicial</h1>
+
+     
+    <label for="periodo" class="form-label">
+      Informe os segundos do timer
+    </label>
+    <input type="number" class="form-control mb-3" id="exampleFormControlInput1" [(ngModel)]="tempo"> 
+    <div class="text-center">
+      <button (click)="timer.start(tempo * 1000)" type="button" class="btn btn-primary mx-2">INICIAR</button>
+      <button (click)="timer.stop()" type="button" class="btn btn-danger">PARAR</button>
+    </div>
+</div>

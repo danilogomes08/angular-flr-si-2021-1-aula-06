@@ -1,0 +1,24 @@
+
+<div class="container-fluid">
+  <h1 class="h3 text-center mt-3 mb-5">Disciplinas</h1>
+
+  <p>
+    Informe as disciplinas
+  </p>
+  <div class="input-group mb-3">
+    <input type="text" #input class="form-control">
+    <button class="btn btn-primary" type="button" id="button-addon2" (click)="this.disciplinas.add(input.value); input.value='';">Adicionar</button>
+  </div>
+
+  <ul class="list-group list-group-flush">
+    <li *ngFor="let disciplina of this.disciplinas.getDisciplina(), index as i" class="mb-3 list-group-item">
+      {{disciplina}}
+      <button (click)="this.disciplinas.removeDisciplina(i)" type="button" class=" btn btn-danger btn-sm">remover</button>
+    </li>
+    <li *ngFor="let disciplina of this.disciplinas.getLista(), index as i" class="mb-3 list-group-item">
+      {{disciplina.title}}
+    <button (click)="this.disciplinas.remove(i)" type="button" class=" btn btn-danger btn-sm">remover</button>
+    </li>
+</ul>
+
+</div>
